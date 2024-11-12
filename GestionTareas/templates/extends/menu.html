@@ -1,0 +1,12 @@
+<!-- Cabecera con menú de navegación -->
+<ul>
+    <li><a href="{% url 'lista_proyectos' %}">Listado de proyectos</a></li>
+    <li><a href="{% url 'lista_etiquetas_tareas_proyecto' 10 %}">Etiquetas de tareas (Proyecto 10)</a></li>
+    <li><a href="{% url 'lista_tarea_asignada' 10 %}">Tareas del proyecto 10</a></li>
+    <li><a href="{% url 'lista_tarea_texto' 'hola' %}">Tareas con texto específico</a></li>
+    <li><a href="{% url 'lista_tareas_completadas' 2000 2024 %}">Tareas completadas (2000-2024)</a></li>
+    <li><a href="{% url 'comentarios_tarea' 3 'Hola' 2000 %}">Comentarios de tarea específica</a></li>
+    <li><a href="{% url 'lista_usuarios_asignados' 10 %}">Usuarios asignados a tarea 10</a></li>
+    <li><a href="{% url 'ultimo_comentario_usuario' 3 10 %}">Último usuario en comentar</a></li>
+    <li><a href="{% url 'lista_usuarios_no_asignados' 10 %}">Usuarios no asignados</a></li>
+</ul>
