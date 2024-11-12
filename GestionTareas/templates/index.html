@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+    <h1>Gestior de Tareas</h1>
+
+    <h2>Lista de enlaces de proyectos</h2>
+    <ul>
+        <li><a href="{% url 'lista_proyectos' %}">Listado de proyectos</a></li>
+    </ul><br>
+    <ul>
+        <li><a href="{% url 'lista_etiquetas_tareas_proyecto' 10 %}">Todas las etiquetas usadas en todas las tareas de un proyecto concreto (10)</a></li>
+    </ul><br>
+
+    <h2>Lista de enlaces de tareas</h2>
+    <ul>
+        <li><a href="{% url 'lista_tarea_asignada' 10 %}">Listado de tareas del proyecto 10</a></li>
+    </ul><br>
+    <ul>
+        <li><a href="{% url 'lista_tarea_texto' "hola" %}">Listado de tareas con un texto concreto</a></li>
+    </ul><br>
+    <ul>
+        <li><a href="{% url 'lista_tareas_completadas' 2000 2024 %}">Listado de tareas completadas entre 2000 y 2024</a></li>
+    </ul><br>
+    <ul>
+        <li><a href="{% url 'comentarios_tarea' 3 "Hola" 2000 %}">Todos los comentarios de una tarea concreta en un año especifico y comiencen por una palabra determinada</a></li>
+    </ul><br>
+
+    <h2>Lista de enlaces de usuarios</h2>
+    <ul>
+        <li><a href="{% url 'lista_usuarios_asignados' 10 %}">Listado de usuarios asignados a la tarea 10</a></li>
+    </ul><br>
+    <ul>
+        <li><a href="{% url 'ultimo_comentario_usuario' 3 10 %}">Último usuario en realizar un comentario en una tarea de un proyecto concreto</a></li>
+    </ul><br>
+    <ul>
+        <li><a href="{% url 'lista_usuarios_no_asignados' 10 %}">Usuarios que no estan asignados a ninguna tarea</a></li>
+    </ul><br>
+    </body>
+</html>
